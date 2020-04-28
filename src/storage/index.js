@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'mall';
 
 export default{
+    //存储值
     setItem(key,value,module_name){
         if(module_name){
             let val = this.getItem(module_name);
@@ -12,6 +13,7 @@ export default{
             window.sessionStorage.setItem(STORAGE_KEY,JSON.stringify(val));
         }
     },
+    //获取某一个模块下的属性user下面的userName
     getItem(key,module_name){
         if(module_name){
             let val = this.getItem(module_name);
